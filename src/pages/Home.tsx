@@ -51,7 +51,7 @@ const App = () => {
     if (!storedUser) {
       return alert("Please login to add items to cart!"); 
     }
-     await axios.post("http://localhost:3000/addCart", {
+     await axios.post("https://crumbe-1.onrender.com/addCart", {
       user,
       productId,
       product: productName,

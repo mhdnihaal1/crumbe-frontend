@@ -30,7 +30,7 @@ const Checkout = () => {
     }
 
       const response = await axios.get(
-        `http://localhost:3000/getCart?userId=${user._id}`
+        `https://crumbe-1.onrender.com/getCart?userId=${user._id}`
       );
 
       const cartData = response.data.cart;
@@ -53,7 +53,7 @@ const Checkout = () => {
      };
 
         const response = await axios.post(
-      "http://localhost:3000/addOrder",
+      "https://crumbe-1.onrender.com/addOrder",
        obj
     );
     console.log("Add to Cart Response:", response.data);

@@ -28,7 +28,7 @@ const Cart = () => {
 
       try {
         const response = await axios.get(
-          `http://localhost:3000/getCart?userId=${user._id}`
+          `https://crumbe-1.onrender.com/getCart?userId=${user._id}`
         );
         setCart(response.data.cart);
       } catch (error) {
@@ -43,7 +43,7 @@ const Cart = () => {
     if (!cart) return;
 
     const response = await axios.post(
-      "http://localhost:3000/editCart",
+      "https://crumbe-1.onrender.com/editCart",
       { user, itemId, action: "increase" }
     );
 
@@ -54,7 +54,7 @@ const Cart = () => {
     if (!cart) return;
 
     const response = await axios.post(
-      "http://localhost:3000/editCart",
+      "https://crumbe-1.onrender.com/editCart",
       { user, itemId, action: "decrease" }
     );
 

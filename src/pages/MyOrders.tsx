@@ -29,7 +29,7 @@ const MyOrders = () => {
 
       try {
         const res = await axios.get(
-          `http://localhost:3000/getOrders?userId=${user._id}`
+          `https://crumbe-1.onrender.com/getOrders?userId=${user._id}`
         );
         setOrders(res.data.orders);
       } catch (err) {
